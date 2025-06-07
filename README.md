@@ -26,7 +26,7 @@ A fun and interactive web-based implementation of the classic code-breaking game
 2. Open `index.html` in your web browser
 3. Start playing!
 
-Or try it directly by opening the [GitHub Pages](https://SohanAri.github.com/Cows-Bulls) link (if deployed)
+Or try it directly by opening the [GitHub Pages](https://github.com/SohanAri/Cows-Bulls) link (if deployed)
 
 ## 🎨 Screenshots
 
