@@ -30,10 +30,10 @@ Or try it directly by opening the [GitHub Pages](https://github.com/SohanAri/Cow
 
 ## 🎨 Screenshots
 
-![Gameplay Screenshot](demo/gameplay.png)
+![Gameplay Screenshot](demo/demo01.png)
 *Game in progress with feedback*
 
-![Win Screen](demo/win-screen.png)
+![Win Screen](demo/demo02.png)
 *Victory screen with celebration meme*
 
 ## 🛠️ Technologies Used
