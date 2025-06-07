@@ -20,7 +20,6 @@ const playAgainButton = document.getElementById('play-again');
 function initGame() {
     // Generate a new secret code
     secretCode = generateSecretCode();
-    console.log('Secret code:', secretCode.join('')); // For debugging
     
     // Reset game state
     currentAttempt = 1;
