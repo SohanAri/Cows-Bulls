@@ -1,0 +1,293 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.attempt-counter {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+    font-weight: 500;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#guess-input {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#guess-input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+#submit-guess {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+#submit-guess:hover {
+    background: #5a52d3;
+    transform: translateY(-2px);
+}
+
+#submit-guess:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.feedback-container {
+    margin-top: 30px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #eee;
+    transition: all 0.3s ease;
+}
+
+.dot.bull {
+    background: #4caf50;
+}
+
+.dot.cow {
+    background: #ffc107;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.history-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.history-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.history-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.history-entry:last-child {
+    border-bottom: none;
+}
+
+/* Meme Container */
+.meme-container {
+    height: 200px;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.meme-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Result Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.result-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#play-again {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+#play-again:hover {
+    background: #5a52d3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        height: auto;
+        max-height: 90vh;
+    }
+    
+    .game-container {
+        flex-direction: column;
+    }
+    
+    .left-panel, .right-panel {
+        flex: none;
+    }
+    
+    .left-panel {
+        padding: 30px 20px;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .meme-container {
+        height: 150px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.history-entry {
+    animation: fadeIn 0.3s ease-out forwards;
+    opacity: 0;
+}
+
+.history-entry:nth-child(1) { animation-delay: 0.1s; }
+.history-entry:nth-child(2) { animation-delay: 0.2s; }
+.history-entry:nth-child(3) { animation-delay: 0.3s; }
+.history-entry:nth-child(4) { animation-delay: 0.4s; }
+.history-entry:nth-child(5) { animation-delay: 0.5s; }
